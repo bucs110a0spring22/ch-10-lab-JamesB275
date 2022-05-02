@@ -62,7 +62,8 @@ class Controller:
 
             # redraw the entire screen
             self.enemies.update()
-            self.screen.blit(self.background, (0, 0))
+            self.background=pygame.image.load('assets/background image.jpeg')
+            self.screen.blit(self.background,[0,0])
             if(self.hero.health == 0):
                 self.state = "GAMEOVER"
             self.all_sprites.draw(self.screen)
